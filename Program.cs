@@ -1,6 +1,8 @@
+using Dotnet_AI.Services;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpClient<IAiService, GeminiAiService>();
 
 
 builder.Services.AddControllers();
